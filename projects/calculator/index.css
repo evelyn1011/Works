@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+html,body {
+  width: 100%;
+  height: 100%;
+  background-color: linear;
+}
+
+body {
+  display: flex;
+}
+
+.box {
+  margin: auto;
+  width: 460px;
+  height: 730px;
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.screen {
+  height: 185px;
+  width: 410px;
+  margin: 25px auto;
+  color: #ffffff;
+}
+
+.screen .display-cover {
+  width: 360px;
+  height: 90px;
+  line-height: 90px;
+  font-size: 55px;
+  text-align: right;
+  margin: 0 auto;
+  overflow: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  scroll-snap-type: x mandatory;
+}
+.display {
+  scroll-snap-align: end;
+  display: inline-block;
+}
+/* 滚动条垂直width 水平的hieght */
+.screen .output::-webkit-scrollbar, .display-cover::-webkit-scrollbar {
+  height: 3px;
+}
+/* 滚动条里面滑块 */
+.screen .output::-webkit-scrollbar-thumb, .display-cover::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.3);
+}
+/* 滚动条里面轨道 */
+/* .screen .display::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+} */
+
+.screen .output {
+  width: 360px;
+  height: 90px;
+  font-size: 33px;
+  line-height: 90px;
+  text-align: right;
+  margin: 0 auto;
+  overflow: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  scroll-snap-align: end;
+}
+
+.btns {
+  width: 400px;
+  height: 520px;
+  margin: 25px auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btns li {
+  width: 80px;
+  height: 80px;
+  margin: 7px;
+  border-radius: 50%;
+  line-height: 80px;
+  text-align: center;
+  font-size: 30px ;
+  position: relative;
+}
+
+.btns .backspace-icon {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  width: 27px;
+  height: 24px;
+  line-height: 20px;
+  background-color: #ffffff;
+  color: rgb(255, 149, 1);
+  display: flex;
+  justify-content: left;
+  border-radius: 8%;
+}
+
+.btns .backspace-icon::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background-color: #ffffff ;
+  position: absolute;
+  transform: rotate(45deg);
+  top: 4.1px;
+  left: -8px;
+  border-top-right-radius: 100%;
+  border-bottom-left-radius: 15%;
+}
+
+.btns .zero {
+  width: 174px;
+  height: 80px;
+  border-radius: 80px;
+}
+
+.grey {
+  background-color: rgb(166, 166, 166);
+}
+
+.orange {
+  background-color: rgb(255, 149, 1);
+  color: #ffffff;
+}
+
+.dark {
+  background-color: rgb(51, 51, 51);
+  color: #ffffff;
+}
+
+.grey:hover {
+  background-color: rgb(166, 166, 166, .8);
+  cursor: pointer;
+}
+
+.orange:hover {
+  background-color: rgb(255, 149, 1, .8);
+  cursor: pointer;
+}
+
+.dark:hover {
+  background-color: rgb(51, 51, 51, .8);
+  cursor: pointer;
+}
