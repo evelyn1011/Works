@@ -1,0 +1,46 @@
+<!--index.wxml-->
+<view id="whole">
+  <view>
+    <view class="slider">
+      <slider min="1" max="60" show-value activeColor="#ff756b" backgroundColor="#d9d9d9" value="{{ time }}" bindchange="slideChange"></slider>
+    </view>
+
+    <view class="task-text">
+      <view class="task-title">选择一个任务</view>
+      <view>在接下来的20分钟内，你将专注完成这件事</view>
+    </view>
+
+    <view class="task-prog">
+      <view class="progSelecter {{ tabNow == index ? 'active' : ''}}" wx:for="{{ progArr }}" wx:key="index" data-id="{{ index }}" bindtap="selectTab">
+        <view>
+          <image src="../../images/{{ item.icon }}.png" />
+        </view>
+        <view>{{ item.text }}</view>
+      </view>
+    </view>
+
+    <view class="start" bindtap="start">开始专注</view>
+  </view>
+
+
+  <!-- 计时页面 -->
+  <view class="clock" style=" height: {{ winHeight }}rpx;" hidden="{{ hide == 0 ? '' : 1}}">
+
+    <view class="pr">
+      <canvas type="2d" id="pr-bg" class="pr-bg"></canvas>
+      <canvas type="2d" id="pr-active" class="pr-active"></canvas>
+      <view>{{ countDown }}</view>
+    </view>
+
+    <view class="btns">
+      <view class="pause" wx:if="{{ pause }}" bindtap="pause">暂停</view>
+      <view class="pauseFor" wx:if="{{ cOrQ }}">
+        <view bindtap="continue">继续</view>
+        <view bindtap="quit">放弃</view>
+      </view>
+      <view class="back" wx:if="{{ back }}" bindtap="back">返回</view>
+    </view>
+
+  </view>
+
+</view>

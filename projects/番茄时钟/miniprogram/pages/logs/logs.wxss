@@ -1,0 +1,70 @@
+.clockData {
+  display: flex;
+  flex-direction: column;
+}
+
+.clockData .chartItem {
+  width: auto;
+  height: 400rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-bottom: #eeeeee 10rpx solid ;
+}
+
+.chartItem .chart {
+  width: 200rpx;
+  height: 200rpx;
+  margin: 0 80rpx;
+  text-align: center;
+  /* border: gray 3rpx solid; */
+}
+
+.chart :nth-child(1){
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 35rpx;
+  color: gray;
+}
+.chart :nth-child(2) {
+  color: #ff756b;
+}
+
+
+.detail {
+  margin: 0 auto;
+  width: 700rpx;
+  /* display: flex;
+  flex-direction: column; */
+}
+
+.detail .detail-bar {
+  display: flex;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-bottom: 4rpx solid #ff756b;
+  font-size: 35rpx;
+}
+.detail .detail-bar .bar-title {
+  flex: 1;
+  color: #ff756b;
+}
+
+.detail-bar text {
+  flex: 1;
+  text-align: right;
+  font-size: 30rpx;
+  margin: 0 10rpx;
+}
+
+.active {
+  color: #ff756b;
+} 
+
+
+.detail-list {
+  display: flex;
+  justify-content: space-between;
+  font-size: 35rpx;
+  margin: 7rpx auto;
+}

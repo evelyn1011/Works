@@ -1,0 +1,101 @@
+.slider {
+  width: 650rpx;
+  margin: 40rpx auto 40rpx 75rpx;
+}
+
+.task-text {
+  margin: 170rpx auto 23rpx auto;
+  text-align: center;
+  align-self: center;
+}
+
+.task-text :nth-child(1) {
+  font-size: 37rpx;
+  margin-bottom: 30rpx;
+}
+
+.task-text :nth-child(2) {
+  color: #c7c7c7;
+  font-size: 32rpx;
+}
+
+.task-prog {
+  display: flex;
+  justify-content: center;
+  width: 650rpx;
+  flex-wrap: wrap;
+  margin: auto 50rpx;
+}
+
+.task-prog .progSelecter {
+  width: 210rpx;
+  margin: 13rpx auto;
+  text-align: center;
+  font-size: 30rpx;
+  padding: 10rpx 0;
+  border-radius: 30rpx;
+}
+
+.active {
+  background-color: #ffa59e;
+}
+
+.task-prog .progSelecter image {
+  height: 75rpx;
+  width: 75rpx;
+  margin: 8rpx;
+}
+
+.start {
+  width: 250rpx;
+  line-height: 100rpx;
+  text-align: center;
+  margin: 40rpx auto;
+  border: 5rpx solid #ff756b;
+  color: #ff756b;
+  border-radius: 20rpx;
+}
+
+.clock {
+  width: 750rpx;
+  background-color: #ff675c;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.clock .pr {
+  width: 400rpx;
+  height: 400rpx;
+  margin: 135rpx auto 50rpx auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: white;
+}
+
+.clock .pr .pr-bg,
+.pr-active {
+
+  width: 400rpx;
+  height: 400rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.btns .pause,
+.btns .back,
+.btns .pauseFor :first-child,
+.btns .pauseFor :last-child {
+  color: white;
+  padding: 8rpx 70rpx;
+  line-height: 60rpx;
+  border: white solid 3rpx;
+  border-radius: 16rpx;
+  margin: 13rpx;
+}

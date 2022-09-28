@@ -1,0 +1,31 @@
+<!--logs.wxml-->
+<view class="clockData">
+  <view class="chartItem">
+    <view class="chart" wx:for="{{chart}}" wx:key="item">
+      <view>{{ item.title }}</view>
+      <view>{{ item.value }}</view>
+    </view>
+  </view>
+
+
+  <view class="detail">
+    <view class="detail-bar">
+      <view class="bar-title">分类统计</view>
+      <view>
+        <text class="{{ currentIndex == 0 ? 'active' : ''}}" bindtap="changeType" data-index="0">今日</text>
+        <text class="{{ currentIndex == 1 ? 'active' : ''}}" bindtap="changeType" data-index="1">历史</text>
+      </view>
+    </view>
+
+    <view class="detail-list" wx:for="{{ list }}" wx:key="index" wx:if="{{list.length > 0}}">
+      <view>{{ item.date }}</view>
+      <view>{{ progArr[item.tab].text }}</view>
+      <view>{{ item.time }}分钟</view>
+    </view>
+    <view class="detail-list" wx:if="{{list.length == 0}}">
+      暂无数据~
+    </view>
+  </view>
+
+
+</view>
