@@ -1,0 +1,47 @@
+<!--pages/order/order.wxml-->
+<scroll-view scroll-x class="scroll_view">
+  <view class="tab">
+    <view class="tab_item {{ tabNow === index ? 'select' : '' }}" wx:for="{{ tabList }}" data-id="{{ index }}" wx:key="index" bindtab="selectTab">
+      {{ item }}
+
+    </view>
+  </view>
+</scroll-view>
+
+
+<view wx:if="{{ tabNow === 0 }}" class="body">
+  <view class="tips">
+    向上拖动更新信息~~~
+  </view>
+  <view class="order">
+    <view class="order_top">
+      <view class="top_left">
+        <image src="../../images/owner.png"></image>
+        <view class="name">
+          <text>租借服务</text>
+          <text>2天前</text>
+        </view>
+      </view>
+      <view class="top_right">
+        待帮助
+      </view>
+    </view>
+    <view class="order_content">
+      <view class="content">
+        借个电动车 约定时间13：55 租借时长30分钟归还
+      </view>
+      <view class="address">
+        目的地：其它区域-其它区域-其它区域
+      </view>
+    </view>
+<view class="order_bottom">
+<view class="money">
+金额 ￥10
+</view>
+<view class="accept">
+接受
+</view>
+</view>
+
+  </view>
+</view>

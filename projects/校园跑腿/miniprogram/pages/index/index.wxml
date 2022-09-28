@@ -1,0 +1,29 @@
+<!-- 学校图片 -->
+<view class="banner">
+  <swiper indicator-dots="true" autoplay="true"
+  class="banner_body">
+    <swiper-item wx:for="{{banner}}" wx:key="index" 
+    class="banner_item">
+    <image src="{{item}}" mode="widthFix"></image>
+    </swiper-item>
+  </swiper>
+</view>
+
+<!-- 公告 -->
+<view class="notice">
+  <image src="../../images/notice.png">
+  </image>
+  <text>海大校园跑腿</text>
+</view>
+
+<!-- 功能 -->
+<view class="container">
+  <view class="body" wx:for="{{indexConfig}}" wx:key="index" data-url="{{ item.url }}" bindtap="toDetail">
+    <view class="circleBorder">
+      <view class="icon">
+        <image src="{{item.icon}}"></image>
+    </view>
+    </view>
+    <text class="text">{{item.text}}</text>
+  </view>
+</view>

@@ -1,0 +1,1 @@
+"E:\微信小程序开发工具\微信web开发者工具\cli.bat" cloud functions deploy --e cloud1-0g4pi1gy1da4c5ff --n quickstartFunctions --r --project "E:\html code\小程序" --report_first --report
